@@ -9,7 +9,6 @@ export default function Home() {
       <div>Hello World</div>
       <div>Select a lesson:</div>
       <LinkList links={lessons} />
-      <LinkList links={lessons} />
     </div>
   );
 }
