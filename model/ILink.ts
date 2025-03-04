@@ -1,4 +1,4 @@
-export interface ILesson {
+export interface ILink {
   title: string;
   path: string;
 }
