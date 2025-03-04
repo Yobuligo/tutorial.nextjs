@@ -1,5 +1,5 @@
-import { Header } from "@/components/header/Header";
 import { LinkList } from "@/components/linkList/LinkList";
+import { Title } from "@/components/title/Title";
 import { ILink } from "@/model/ILink";
 
 const links: ILink[] = [
@@ -8,10 +8,10 @@ const links: ILink[] = [
   { title: "Community", path: "/lesson01/community" },
 ];
 
-export default function Lesson01() {
+export default function Lesson01Page() {
   return (
     <div>
-      <Header title="Lesson 01" />;
+      <Title title="Lesson 01" />;
       <LinkList links={links} />
     </div>
   );

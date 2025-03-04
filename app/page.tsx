@@ -5,7 +5,7 @@ const lessons: ILink[] = [{ title: "Lesson 01", path: "/lesson01" }];
 
 export default function Home() {
   return (
-    <div>
+    <div>      
       <div>Hello World</div>
       <div>Select a lesson:</div>
       <LinkList links={lessons} />

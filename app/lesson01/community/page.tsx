@@ -1,5 +1,5 @@
-import { Header } from "@/components/header/Header";
+import { Title } from "@/components/title/Title";
 
-export default function CommunityPage(){
-    return <Header title="Community"/>
+export default function CommunityPage() {
+  return <Title title="Community" />;
 }
