@@ -2,6 +2,12 @@ import Image from "next/image";
 import styles from "./page.module.css";
 
 export default function Home() {
+  const test = () => {
+    console.log("Hello WOrld");
+  };
+
+  test();
+
   return (
     <div className={styles.page}>
       <main className={styles.main}>
