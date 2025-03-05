@@ -11,7 +11,7 @@ const links: ILink[] = [
 export default function Lesson01Page() {
   return (
     <div>
-      <Title title="Lesson 01" />;
+      <Title title="Lesson 01" />
       <LinkList links={links} />
     </div>
   );

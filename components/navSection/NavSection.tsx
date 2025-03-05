@@ -6,7 +6,7 @@ export const NavSection: React.FC<INavSectionProps> = (props) => {
   return (
     <div className={styles.navSection}>
       <NavBar links={props.links} />
-      <div>{props.children}</div>
+      <div className={styles.content}>{props.children}</div>
     </div>
   );
 };

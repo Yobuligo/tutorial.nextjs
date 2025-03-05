@@ -1,4 +1,6 @@
 import { Header } from "@/components/header/Header";
+import { NavSection } from "@/components/navSection/NavSection";
+import { ILink } from "@/model/ILink";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -12,6 +14,12 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
+
+const lessons: ILink[] = [
+  { title: "Lesson 01", path: "/lesson01" },
+  { title: "Lesson 02", path: "/lesson02" },
+  { title: "Lesson 03", path: "/lesson03" },
+];
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -27,7 +35,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <Header />
-        {children}
+        <NavSection links={lessons}>{children}</NavSection>
       </body>
     </html>
   );
