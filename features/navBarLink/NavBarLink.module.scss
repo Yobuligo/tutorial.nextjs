@@ -1,0 +1,15 @@
+.navBarLink {
+  padding-left: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: lightgray;
+  color: black;
+  width: 10rem;
+  height: 4rem;
+}
+.container {
+  :hover {
+    background-color: lightblue;
+  }
+}
