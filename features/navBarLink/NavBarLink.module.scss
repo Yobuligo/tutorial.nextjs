@@ -8,8 +8,13 @@
   width: 10rem;
   height: 4rem;
 }
+
+.selected {
+  background-color: rgb(198, 228, 238);
+}
+
 .container {
   :hover {
-    background-color: rgb(198, 228, 238);
+    @extend .selected;
   }
 }
