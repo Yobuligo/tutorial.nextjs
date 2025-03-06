@@ -1,4 +1,5 @@
 import { ICustomer } from "@/shared/models/ICustomers";
+import { uuid } from "@/utils/uuid";
 
 export const fetchCustomers = async (
   delayInMilliseconds?: number
@@ -9,12 +10,11 @@ export const fetchCustomers = async (
     );
   }
 
-  const response = await fetch("http://localhost:5000/customers");
+  const customers: ICustomer[] = [
+    { id: uuid(), firstname: "Stacey", lastname: "Starfish" },
+    { id: uuid(), firstname: "Alex", lastname: "Ant" },
+    { id: uuid(), firstname: "Bertha", lastname: "Bear" },
+  ];
 
-  if (response.ok) {
-    const data = response.json();
-    return data;
-  } else {
-    return [];
-  }
+  return customers;
 };
