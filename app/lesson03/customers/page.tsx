@@ -1,13 +1,21 @@
-import { fetchCustomers } from "@/api/fetchCustomers";
-import { CustomerList } from "@/features/customerList/CustomerList";
+import { Spinner } from "@/components/spinner/Spinner";
+import CustomerList from "@/features/customerList/CustomerList";
+import { Suspense } from "react";
 
 export default async function CustomersPage() {
-  const customers = await fetchCustomers(2000);
-
   return (
     <div>
       <h3>Customers</h3>
-      <CustomerList customers={customers} />
+      <Suspense
+        fallback={
+          <>
+            <h1>...Loading</h1>
+            <Spinner />
+          </>
+        }
+      >
+        <CustomerList title="Customers" />
+      </Suspense>
     </div>
   );
 }
