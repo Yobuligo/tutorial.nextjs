@@ -8,8 +8,8 @@ const lessons: ILink[] = [
   { title: "Lesson 03", path: "/lesson03" },
 ];
 
-export default function Home() {
-  const test = useTest()
+export default async function Home() {
+  const test = useTest();
 
   return (
     <div>
